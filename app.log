@@ -41,3 +41,39 @@ Traceback (most recent call last):
   File "/workspaces/python-learning/mini_safe_calc_v2.py", line 20, in run
     raise ValidationError(f"式が不正です: {expr!r}（例: '10/2'）") from e
 ValidationError: 式が不正です: 'abc'（例: '10/2'）
+2025-11-10 21:44:52,554 [INFO] app OK: 10/2 => 5.0
+2025-11-10 21:44:52,555 [WARNING] app BUSINESS ERROR: 0で割ることはできません
+Traceback (most recent call last):
+  File "/workspaces/python-learning/mini_safe_calc_v2.py", line 12, in safe_divide
+    return a / b
+           ~~^~~
+ZeroDivisionError: float division by zero
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspaces/python-learning/mini_safe_calc_v2.py", line 36, in main
+    result = run(expr)
+             ^^^^^^^^^
+  File "/workspaces/python-learning/mini_safe_calc_v2.py", line 21, in run
+    return safe_divide(a, b)
+           ^^^^^^^^^^^^^^^^^
+  File "/workspaces/python-learning/mini_safe_calc_v2.py", line 14, in safe_divide
+    raise CalcError("0で割ることはできません") from e
+CalcError: 0で割ることはできません
+2025-11-10 21:44:52,560 [WARNING] app BUSINESS ERROR: 式が不正です: 'abc'（例: '10/2'）
+Traceback (most recent call last):
+  File "/workspaces/python-learning/mini_safe_calc_v2.py", line 18, in run
+    a, b = map(float, expr.split("/"))
+    ^^^^
+ValueError: could not convert string to float: 'abc'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspaces/python-learning/mini_safe_calc_v2.py", line 36, in main
+    result = run(expr)
+             ^^^^^^^^^
+  File "/workspaces/python-learning/mini_safe_calc_v2.py", line 20, in run
+    raise ValidationError(f"式が不正です: {expr!r}（例: '10/2'）") from e
+ValidationError: 式が不正です: 'abc'（例: '10/2'）
