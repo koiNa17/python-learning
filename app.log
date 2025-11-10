@@ -1,0 +1,7 @@
+2025-11-10 04:02:25,776 [ERROR] エラー発生: division by zero
+2025-11-10 04:15:13,275 [ERROR] ゼロ除算エラー発生
+Traceback (most recent call last):
+  File "/workspaces/day16_env/raise_logging_test.py", line 7, in divide
+    return a / b
+           ~~^~~
+ZeroDivisionError: division by zero
