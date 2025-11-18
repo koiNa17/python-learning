@@ -1,3 +1,5 @@
-name,age
-Yoshi,47
-Ken,30
+name,age,age_group
+Yoshi,47,40代
+Ken,30,30代
+Taro,41,40代
+Yuki,52,50代〜
