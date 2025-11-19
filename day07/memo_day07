@@ -1,0 +1,17 @@
+"""
+次のステップ（Day07〜Day08）のおすすめ
+
+① 関数分割 → モジュール化（import 修行）
+  複数ファイルに分けて from util import load_csv とかやるやつ
+
+② エラー設計（try except の “応用”）
+  raise
+  finally
+  カスタム例外
+  例外チェーン
+
+③ ログのレベル設計（logging 修行）
+  INFO / WARNING / ERROR の使い分け
+  ログファイルに出す
+  監視できるログの形を考える
+"""
